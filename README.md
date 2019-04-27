@@ -41,7 +41,7 @@ The first assumption can be validated from the scatter plots and the results of 
 **2. There should not be any outliers present.**
 The residuals mustn't be more than 3 standard deviations away from the residual mean. Let's check that with a calculation of standardized residuals.
 
-![standardized residuals]()
+![standardized residuals](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/standardized-residuals.PNG)
 
 **3. No heteroscedasticity.**
 This means the residuals must have a constant variance across all the observations. The residual vs fitted values plot tells about it.
@@ -52,14 +52,20 @@ This means the residuals must have a constant variance across all the observatio
 
 In our residual plot, the variance fans in which is a sign of heteroscedasticity. A different interpretation is that it can be seen that for fitted values < 140000 of the **Number of weekly riders** variable, residuals are -ve while they are +ve in between [1400000, 150000]. This made me easy to find out a pattern which is not the desired outcome when checking for goodness of fit via residual plots.
 
-**4. Sample observations should be independent.**
+To remove heteroscedasticity, either **re-defining the variables** or **weighted regression technique** (How in MS-Excel? - Coming soon) or **Dependent variable transformation** can be applied and convert the analysis to homscedastic. However, this only matters when understanding the effects of independent variables and not if prediction making is the main goal. Upcoming: Weighted Regression Techniuqe.
+
+**4. Observations of the error term are uncorrelated with each other.**
+If there is a pattern and one error term (generally the order in which observations are collected) helps in predicting the next error term, then there is problem.
+
+![error-term-correlation](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/residual-vs-observation-order.PNG)
+
+To randomize this serial correlation, independent variables which can be attributed to such effect has to be added and required subject matter expertise. It is out of scope for this analysis as the data set is constrained with respect to the number of independent variables.
+
 **5. Error terms should be normally distributed with mean 0 and constant variance.** 
 
 
-**6. Absence of multicollinearity and auto-correlation.**
-
-
-
+**6. Absence of multicollinearity.**
+This means no independent variable is a perfect linear function of other explanatory variables. 
 
 
 It's time to evaluate assumptions to check the goodness of fit and find problems with the model in spite of a good R2 value and improve the model.
