@@ -14,7 +14,7 @@ This is a transit demand data set and the dependent variable under consideration
 
 All the scatter plots helps use decide to go for a linear regression model
 
-**Assumptions to apply linear regression model?**
+**Assumptions to apply linear regression model:**
 1. There must be a linear relation between independent and dependent variables. 
 2. There should not be any outliers present. 
 3. No heteroscedasticity 
@@ -25,7 +25,7 @@ All the scatter plots helps use decide to go for a linear regression model
 
 Though it is not an exact linear relation, the whole purpose of modelling is to understand the uncertainty complemented with statistical analysis. Let's apply the regression technique and discover if the assumptions get validated without which our model doesn't stand a suitable fit for the given data and future predictions.
 
-### Results of the model**:
+### Results of the model:
 
 ![Results of regression - Transit demand](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/regression-ouput.PNG)
 
@@ -33,7 +33,7 @@ Though it is not an exact linear relation, the whole purpose of modelling is to 
 
 While R2 is one parameter to look out for, the most standard way is to check the residual plotst to evaluate the model. The more random the errors are, the better your model. It means you shouldn't be able to form a pattern in any part of the plot as far residuals are concerned.
 
-### Evaluation of fit/ model:**
+### Evaluation of fit/ model:
 **1. There must be a linear relation between independent and dependent variables.**
 
 The first assumption can be validated from the scatter plots and the results of the regression which showcases different coefficients and the fitted values are calculated using the linear equation. Y = β0 + β1X1 + β2X2 + .... + (error)
