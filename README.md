@@ -76,7 +76,7 @@ This means no independent variable is a perfect linear function of other explana
 It's time to evaluate assumptions to check the goodness of fit and find problems with the model in spite of a good R2 value and improve the model.
 
 ### References used:
-*![StatisticsByJim](http://statisticsbyjim.com)
-*http://blog.excelmasterseries.com/2014/05/linear-regressions-required-assumptions.html
-*Data source: https://journalistsresource.org/wp-content/uploads/2014/11/Sample-data-sets-for-linear-regression1.xlsx
+* ![StatisticsByJim](http://statisticsbyjim.com)
+* http://blog.excelmasterseries.com/2014/05/linear-regressions-required-assumptions.html
+* Data source: https://journalistsresource.org/wp-content/uploads/2014/11/Sample-data-sets-for-linear-regression1.xlsx
 
