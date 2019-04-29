@@ -78,10 +78,9 @@ This has to be taken for granted as there was no precursor information about the
 
 **7. Error terms should be with mean 0.** 
 
-![mean-error-terms]()
+![mean-error-terms](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/average-error-terms.PNG)
 
 It can be seen that the mean of residuals/ error terms is very tiny and can be approximated to 0. This assumption will be however validated as ours is a linear model and we have the constant **β0** which takes care of it by forcing the mean of residuals to zero.
-
 
 ### Conclusion:
 
