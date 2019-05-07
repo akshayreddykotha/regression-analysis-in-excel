@@ -82,6 +82,18 @@ This has to be taken for granted as there was no precursor information about the
 
 It can be seen that the mean of residuals/ error terms is very tiny and can be approximated to 0. This assumption will be however validated as ours is a linear model and we have the constant **β0** which takes care of it by forcing the mean of residuals to zero.
 
+### Fitting a new model - does it makes sense?
+
+It can be seen from the [results](https://github.com/akshayreddykotha/regression-analysis-in-excel#results-of-the-model) of the first model (multiple linear regression - where all the four predictor variables are used), the p-values of all the predictor variable except the `price per week` are greater than the chosen significance level 0.05. This indicates the relationship between the response variable and the three independent variables - `population of the city`, `monthly income of riders`, and `average parking rates per month` is not really significant. Let's remove those variables for better model precision:
+
+**Results of the simple linear regression model (only one predictor variable):
+
+![]()
+
+The value of R-squared **0.93** still explains the relationship with the response variable in spite of having only one predictor variable. Basically, we have removed what is not needed which typically happens in real world data sets too.
+
+Now as R-squared value is only useful to some extent to measure goodness of fit, it doesn't help in assessing the model precision. Model precision is important to build reliable predictive models which can complement decision making. Let's assess the model precision using standard error and compare it to the first model built.
+
 ### Conclusion:
 
 In all the required assumptions, multicollinearity and heteroscedasticity are the one which we are uncertain of but as far as predictions are concerned, we can surely ignore the discrepancies with those two assumptions. From a statistical analysis POV, it is highly recommended to dig deep into making this a better model by different solutions offered. Feel free to pitch in if you'd like to perform a deep dive into it. I look forward to working on it as I explore more of the regression analysis technique.
