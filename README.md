@@ -82,21 +82,48 @@ This has to be taken for granted as there was no precursor information about the
 
 It can be seen that the mean of residuals/ error terms is very tiny and can be approximated to 0. This assumption will be however validated as ours is a linear model and we have the constant **β0** which takes care of it by forcing the mean of residuals to zero.
 
+### Takeaway 1:
+
+In all the required assumptions, multicollinearity and heteroscedasticity are the one which we are uncertain of but as far as predictions are concerned, we can surely ignore the discrepancies with those two assumptions. From a statistical analysis POV, it is highly recommended to dig deep into making this a better model by different solutions offered. Feel free to pitch in if you'd like to perform a deep dive into it. I look forward to working on it as I explore more of the regression analysis technique.
+
 ### Fitting a new model - does it makes sense?
 
 It can be seen from the [results](https://github.com/akshayreddykotha/regression-analysis-in-excel#results-of-the-model) of the first model (multiple linear regression - where all the four predictor variables are used), the p-values of all the predictor variable except the `price per week` are greater than the chosen significance level 0.05. This indicates the relationship between the response variable and the three independent variables - `population of the city`, `monthly income of riders`, and `average parking rates per month` is not really significant. Let's remove those variables for better model precision:
 
-**Results of the simple linear regression model (only one predictor variable):
+**Results of the simple linear regression model (only one predictor variable)**:
 
 ![]()
 
 The value of R-squared **0.93** still explains the relationship with the response variable in spite of having only one predictor variable. Basically, we have removed what is not needed which typically happens in real world data sets too.
 
-Now as R-squared value is only useful to some extent to measure goodness of fit, it doesn't help in assessing the model precision. Model precision is important to build reliable predictive models which can complement decision making. Let's assess the model precision using standard error and compare it to the first model built.
+Now as R-squared value is only useful to some extent to measure goodness of fit (as it a relative measure - %), it doesn't help in assessing the model precision. Model precision is important to build reliable predictive models which can complement decision making. Let's assess the model precision using standard error and compare it to the first model built.
 
-### Conclusion:
+**How to know if it is a model with higher precision?**
 
-In all the required assumptions, multicollinearity and heteroscedasticity are the one which we are uncertain of but as far as predictions are concerned, we can surely ignore the discrepancies with those two assumptions. From a statistical analysis POV, it is highly recommended to dig deep into making this a better model by different solutions offered. Feel free to pitch in if you'd like to perform a deep dive into it. I look forward to working on it as I explore more of the regression analysis technique.
+The model with at least 95% of observations nearer to the correspondig fitted line is more precise, i.e., the observed values must within +/-2*SE.
+
+**Standard error of regression for first model (multiple linear regression)** = 5406.370168
+**How many points are close to the fitted line?**
+
+![]()
+
+It is only one point for which the observed value falls outside the prediction interval of that point. So, there are more than **95%**
+points in this case.
+
+**Standard error of regression for second model (simple linear regression)** = 5620.113932
+
+**How many points are close to the fitted line?**
+
+![]()
+
+It is only one point for which the observed value falls outside the prediction interval of that point. So, there are more than **95%**
+points in this case too.
+
+### Takeaway 2:
+
+Although, it was assumed that removing variables with poor/ no relationship with the dependent variables can make the model much more precise. In our case, we can't really distinguish between both of the models as **equal** number of points are within bounds in their respective fits. This could be due to the scale of the problem (less number of data points in total).
+
+For more complex problems, the precision value to be set is more of a business decision based on how critical the problem is. In that case, we would need more precise models and have to work towards reducing the standard error.
 
 ### References used:
 * [StatisticsByJim](http://statisticsbyjim.com)
