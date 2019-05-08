@@ -92,7 +92,7 @@ It can be seen from the [results](https://github.com/akshayreddykotha/regression
 
 **Results of the simple linear regression model (only one predictor variable)**:
 
-![]()
+![model-with-only-priceperweek-as-independent-variable](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/model-with-only-priceperweek.PNG)
 
 The value of R-squared **0.93** still explains the relationship with the response variable in spite of having only one predictor variable. Basically, we have removed what is not needed which typically happens in real world data sets too.
 
@@ -100,12 +100,13 @@ Now as R-squared value is only useful to some extent to measure goodness of fit 
 
 **How to know if it is a model with higher precision?**
 
-The model with at least 95% of observations nearer to the correspondig fitted line is more precise, i.e., the observed values must within +/-2*SE.
+The model with at least 95% of observations nearer to the corresponding fitted line is more precise, i.e., the observed values must be within +/-2*SE.
 
 **Standard error of regression for first model (multiple linear regression)** = 5406.370168
+
 **How many points are close to the fitted line?**
 
-![]()
+![number of points closer to the fitted line - multiple linear regression](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/no-points-near-to-fitted-line-multiple-linear-regression.PNG)
 
 It is only one point for which the observed value falls outside the prediction interval of that point. So, there are more than **95%**
 points in this case.
@@ -114,14 +115,14 @@ points in this case.
 
 **How many points are close to the fitted line?**
 
-![]()
+![number of points closer to the fitted line - simple linear regression](https://github.com/akshayreddykotha/regression-analysis-in-excel/blob/master/images/no-points-near-to-fitted-line-simple-linear-regression.PNG)
 
 It is only one point for which the observed value falls outside the prediction interval of that point. So, there are more than **95%**
 points in this case too.
 
 ### Takeaway 2:
 
-Although, it was assumed that removing variables with poor/ no relationship with the dependent variables can make the model much more precise. In our case, we can't really distinguish between both of the models as **equal** number of points are within bounds in their respective fits. This could be due to the scale of the problem (less number of data points in total).
+Although, it is probable that removing variables with poor/ no relationship with the dependent variables can make the model much more precise. In our case, we can't really distinguish between both of the models for precision as **equal** number of points are within bounds in their respective fits. This could be due to the scale of the problem (less number of data points in total). It is also observed that the as standard error for the second model (simple linear regression) increased slightly and R2 value decreased slightly which is standard. However, irrespective of the size of changes, they might be practically important based on the business question one wants to answer.
 
 For more complex problems, the precision value to be set is more of a business decision based on how critical the problem is. In that case, we would need more precise models and have to work towards reducing the standard error.
 
